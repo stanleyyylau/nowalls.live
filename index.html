@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>We believe The Web should be free of walls</title>
+
+    <link rel="stylesheet" href="css/index.css">
+</head> 
+<body>
+    <div id="particles-js"></div>
+
+    <div class="container">
+        <div class="position-box">
+            <h1 class="title">We believe The Web should be free of walls</h1>
+        
+            <div class="button-wrapper" id="openBtn">
+                <span class="text">Break it now!</span>
+            </div>
+        </div>
+
+        <div class="popup-container animated" id="popup">
+            <h2 class="title">只需3步，快速翻墙</h2>
+
+            <img src="images/close.png" class="close" id="close" alt="">
+
+            <div class="el-steps el-steps--horizontal">
+                <div class="el-step is-horizontal is-center">
+                    <div class="el-step__head ">
+                        <div class="el-step__line" style="margin-right: 0px;">
+                            <i class="el-step__line-inner" style="transition-delay: 0ms; border-width: 1px; width: 0%;"></i>
+                        </div>
+                        <div class="el-step__icon is-text">
+                            <div class="el-step__icon-inner">1</div>
+                            <img src="images/success.png" class="icon-inner" alt="">
+                        </div>
+                    </div>
+                    <div class="el-step__main">
+                        <!-- <div class="el-step__title is-finish">步骤1</div> -->
+                        <div class="el-step__description">选择你需要购买的账号类型（按月收费或按年收费）</div>
+                    </div>
+                </div>
+                <div class="el-step is-horizontal is-center" >
+                    <div class="el-step__head is-wait">
+                        <div class="el-step__line" style="margin-right: 0px;">
+                            <i class="el-step__line-inner" style="transition-delay: 150ms; border-width: 1px; width: 0%;"></i>
+                        </div>
+                        <div class="el-step__icon is-text">
+                            <div class="el-step__icon-inner">2</div>
+                            <img src="images/success.png" class="icon-inner" alt="">
+                        </div>
+                    </div>
+                    <div class="el-step__main">
+                        <!-- <div class="el-step__title is-finish">步骤2</div> -->
+                        <div class="el-step__description is-wait">选择支付宝或者微信付款</div>
+                    </div>
+                </div>
+                <div class="el-step is-horizontal is-center" >
+                    <div class="el-step__head is-wait">
+                        <div class="el-step__icon is-text">
+                            <div class="el-step__icon-inner">3</div>
+                            <img src="images/success.png" class="icon-inner" alt="">
+                        </div>
+                    </div>
+                    <div class="el-step__main">
+                        <!-- <div class="el-step__title is-process">步骤3</div> -->
+                        <div class="el-step__description is-wait">订单完成，翻墙账号密码信息以及教程会发送到您的邮箱</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-one step-content" >
+                <div class="type-box" id="typeBox">
+                    <div class="type" data-type="30">
+                        <p>按月付费 30元/月</p>
+                    </div>
+                    <div class="type active" data-type="300">
+                        <p>按年付费 300/年</p>
+                    </div>
+                </div>
+
+                <div class="el-input-number">
+                    <span class="el-input-number__decrease is-disabled" id="decrease">
+                        <i class="el-icon-minus"></i>
+                    </span>
+                    <span class="el-input-number__increase" id="increase">
+                        <i class="el-icon-plus"></i>
+                    </span>
+                    <div class="el-input">
+                        <input type="text" value="1" autocomplete="off" max="10" min="1" class="el-input__inner" id="numberInput">
+                    </div>
+                </div>
+
+                <div class="payment-pay"><span class="num" id="sum">300</span>RMB</div>
+                
+            </div>
+            
+            <div class="step-two step-content" style="display:none;">
+                <div class="payment">
+                    <img src="images/alipaycode.png" alt="">
+                    <img src="images/wxcode.png" alt="">
+                </div>
+                
+                <p class="tips">付款的时候请在微信 / 支付宝备注下面订单号（请注意收款人名称 XXX）</p>
+                
+                <div>金额：<span class="order-number" id="paySum">0</span>&nbsp;RMB</div>
+                <div>备注：<span class="order-number" id="orderNumber">0000000000</span></div>
+            </div>
+            
+            <div class="step-three step-content" style="display:none;">
+                <div class="form-item"><input type="text" class="e-mail" id="eMail" placeholder="请输入您的邮箱地址"><span class="err-msg">请输入正确的邮箱</span></div>
+
+                <button class="next submit" id="submit">确认</button>
+            </div>
+
+            <button class="next" id="next">下一步购买</button>
+        </div>
+    </div>
+
+    <form id="form" action="https://mailthis.to/wallfree" method="post" style="display:none;">
+        <input type="hidden" name="totalAmount" value="1">
+        <input type="hidden" name="orderNo" value="">
+        <input type="hidden" name="userEmail" value="">
+    </form>
+
+    <script src="js/particles.min.js"></script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
