@@ -215,9 +215,21 @@ $(document).ready(function () {
    * 生成订单号
    */
   function newOrder() {
+  
     var date = new Date();
-    date = date.toLocaleString();
-    return date.replace(/(\/|[\u4e00-\u9fa5]|\:|\s)/g, '');
+
+    var currentMonth = date.getMonth();
+    if (currentMonth < 9 ){
+        currentMonth = '0' + String(currentMonth + 1)
+    } else {
+        currentMonth = currentMonth + 1
+    }
+    var currentDay = date.getDate()
+    var currentHour = date.getHours()
+    var currentMin = date.getMinutes()
+    var currentDateStr = `${currentMonth}${currentDay}${currentHour}${currentMin}`
+    return currentDateStr;
+
   };
   
   /**
