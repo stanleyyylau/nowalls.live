@@ -417,3 +417,31 @@ div#particles-js {
 .position-box {
     position: static;
 }
+
+@media screen and (max-width:920px){
+    .popup-container{
+        width: 100%;
+        height: 100%;
+    }
+    .step-one .type-box .type{
+        margin-bottom: 12px;
+    }
+    .step-two .payment img{
+        display: block;
+    }
+    .step-two .payment img {
+        display: inline-block;
+        margin:0 10px!important;
+    }
+    .step-two .tips{
+        padding:16px;
+    }
+    .step-three .e-mail{
+        width: 86%;
+    }
+    .err-msg{
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
